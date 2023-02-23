@@ -10,7 +10,7 @@ const port = 5000;
 app.use(express.json());
 app.use(cors());
 
-app.use('/api/users', users)
+
 
 const start = async () => {
     try{
@@ -21,6 +21,8 @@ const start = async () => {
         console.log(error)
     }
 }
+
+app.use('/api/users', users)
 
 start()
 
