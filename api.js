@@ -5,6 +5,8 @@ const cors = require('cors');
 const connectDB = require('./db/connect');
 require('dotenv').config();
 const users = require('./routes/users');
+const projects = require('./routes/project');
+const products = require('./routes/product');
 const port = 5000;
 
 app.use(express.json());
@@ -23,6 +25,7 @@ const start = async () => {
 }
 
 app.use('/api/users', users)
-
+app.use('/api/projects', projects)
+app.use('/api/products', products)
 start()
 
